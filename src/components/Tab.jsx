@@ -146,17 +146,18 @@ const Tab = () => {
     ]
 
     return (
-        <div className="border border-red-600">
-            <div className="flex border-b border-gray-300">
+        <div className='border bg-white p-6 mt-60' style={{ marginTop: '230px', marginLeft:"5%", marginRight:"5%"}}>
+            <div className="flex p-5 justify-center border-b">
                 <button
-                    className={`py-2 px-4 focus:outline-none ${activeTab === 'veg' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700'
+                    className={`rounded-md border mr-5 py-1.5 px-8 focus:outline-none ${activeTab === 'veg' ? 'bg-lime-600 text-white' : ' text-gray-700'
                         }`}
+                   
                     onClick={() => handleTabClick('veg')}
                 >
                     Veg
                 </button>
                 <button
-                    className={`py-2 px-4 focus:outline-none ${activeTab === 'nonveg' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700'
+                    className={`rounded-md border py-1.5 px-8  focus:outline-none ${activeTab === 'nonveg' ? 'bg-lime-600 text-white' : ' text-gray-700'
                         }`}
                     onClick={() => handleTabClick('nonveg')}
                 >
@@ -166,71 +167,72 @@ const Tab = () => {
             <div className="mt-4">
                 {activeTab === 'veg' && (
                     <div>
-                        <h3 className="text-xl font-bold mb-2">Veg Food</h3>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <ul className="">
                             {veg.map((item, index) => (
-                                <li key={index} className="border rounded-lg overflow-hidden">
-                                    <div className="text-center">
-                                        {/* <img
+                                <li key={index} className="md:flex lg:flex xl:flex border rounded-lg overflow-hidden m-4" >
+                                    <div className="text-center p-2">
+                                        <img
+                                            className='w-40 m-auto'
                                             src={item?.img}
                                             alt={item?.title}
-                                            className="w-48 mx-auto"
-                                        /> */}
+                                        />
                                     </div>
                                     <div className="p-4">
-                                        <h3 className="text-xl font-bold mb-2">{item?.title}</h3>
-                                        <p className="mb-4">{item?.description}</p>
-                                        <div className="mb-4">
-                                            <label className="font-bold">{item?.medium?.name}</label>
-                                            <ul className="flex justify-between">
-                                                <li>
-                                                    <span>{item?.medium?.protein}</span>
-                                                    <label>Protein</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.fat}</span>
-                                                    <label>Fat</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.fiber}</span>
-                                                    <label>Fiber</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.carbs}</span>
-                                                    <label>Carbs</label>
-                                                </li>
-                                                <li>=</li>
-                                                <li>
-                                                    <span>{item?.medium?.calorie}</span>
-                                                    <label>Calorie</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <label className="font-bold">{item?.learge?.name}</label>
-                                            <ul className="flex justify-between">
-                                                <li>
-                                                    <span>{item?.learge?.protein}</span>
-                                                    <label>Protein</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.fat}</span>
-                                                    <label>Fat</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.fiber}</span>
-                                                    <label>Fiber</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.carbs}</span>
-                                                    <label>Carbs</label>
-                                                </li>
-                                                <li>=</li>
-                                                <li>
-                                                    <span>{item?.learge?.calorie}</span>
-                                                    <label>Calorie</label>
-                                                </li>
-                                            </ul>
+                                        <h3 className="text-md font-bold mb-2">{item?.title}</h3>
+                                        <p className="text-sm font-semibold text-gray-500 mb-4">{item?.discription}</p>
+                                        <div className='flex'>
+                                            <div className="mb-4 ">
+                                                <label className="text-sm font-semibold">{item?.medium?.name}</label>
+                                                <ul className="flex mr-2">
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.protein}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Protein</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fat}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fat</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fiber}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fiber</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.carbs}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Carbs</h6>
+                                                    </li>
+                                                    <li>=</li>
+                                                    <li className='mx-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.calorie}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Calorie</h6>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <label className="text-sm font-semibold">{item?.learge?.name}</label>
+                                                <ul className="flex mr-2">
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.protein}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Protein</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fat}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fat</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fiber}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fiber</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.carbs}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Carbs</h6>
+                                                    </li>
+                                                    <li>=</li>
+                                                    <li className='mx-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.calorie}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Calorie</h6>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -240,71 +242,72 @@ const Tab = () => {
                 )}
                 {activeTab === 'nonveg' && (
                     <div>
-                        <h3 className="text-xl font-bold mb-2">Non-Veg Food</h3>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <ul className="">
                             {nonveg.map((item, index) => (
-                                <li key={index} className="border rounded-lg overflow-hidden">
-                                    <div className="text-center">
-                                        {/* <img
+                                <li key={index} className="md:flex lg:flex xl:flex border rounded-lg overflow-hidden m-4">
+                                    <div className="text-center p-2">
+                                        <img
+                                            className='w-40 m-auto'
                                             src={item?.img}
                                             alt={item?.title}
-                                            className="w-48 mx-auto"
-                                        /> */}
+                                        />
                                     </div>
                                     <div className="p-4">
-                                        <h3 className="text-xl font-bold mb-2">{item?.title}</h3>
-                                        <p className="mb-4">{item?.description}</p>
-                                        <div className="mb-4">
-                                            <label className="font-bold">{item?.medium?.name}</label>
-                                            <ul className="flex justify-between">
-                                                <li>
-                                                    <span>{item?.medium?.protein}</span>
-                                                    <label>Protein</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.fat}</span>
-                                                    <label>Fat</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.fiber}</span>
-                                                    <label>Fiber</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.medium?.carbs}</span>
-                                                    <label>Carbs</label>
-                                                </li>
-                                                <li>=</li>
-                                                <li>
-                                                    <span>{item?.medium?.calorie}</span>
-                                                    <label>Calorie</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <label className="font-bold">{item?.learge?.name}</label>
-                                            <ul className="flex justify-between">
-                                                <li>
-                                                    <span>{item?.learge?.protein}</span>
-                                                    <label>Protein</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.fat}</span>
-                                                    <label>Fat</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.fiber}</span>
-                                                    <label>Fiber</label>
-                                                </li>
-                                                <li>
-                                                    <span>{item?.learge?.carbs}</span>
-                                                    <label>Carbs</label>
-                                                </li>
-                                                <li>=</li>
-                                                <li>
-                                                    <span>{item?.learge?.calorie}</span>
-                                                    <label>Calorie</label>
-                                                </li>
-                                            </ul>
+                                        <h3 className="text-md font-bold mb-2">{item?.title}</h3>
+                                        <p className="text-sm font-semibold text-gray-500 mb-4">{item?.discription}</p>
+                                        <div className='flex'>
+                                            <div className="mb-4 ">
+                                                <label className="text-sm font-semibold">{item?.medium?.name}</label>
+                                                <ul className="flex mr-2">
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.protein}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Protein</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fat}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fat</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fiber}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fiber</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.carbs}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Carbs</h6>
+                                                    </li>
+                                                    <li>=</li>
+                                                    <li className='mx-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.calorie}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Calorie</h6>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <label className="text-sm font-semibold">{item?.learge?.name}</label>
+                                                <ul className="flex mr-2">
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.protein}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Protein</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fat}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fat</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.fiber}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Fiber</h6>
+                                                    </li>
+                                                    <li className='mr-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.carbs}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Carbs</h6>
+                                                    </li>
+                                                    <li>=</li>
+                                                    <li className='mx-2'>
+                                                        <span className='text-xs font-medium'>{item?.medium?.calorie}</span>
+                                                        <h6 className='text-lime-600 font-medium text-sm'>Calorie</h6>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
