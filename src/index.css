@@ -1,0 +1,48 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("./asset/bgpatern.webp");
+  height: auto;
+  width: auto;
+  background-color: white;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.footer{
+  text-align: center;
+  background-color: #f8fbf5;
+  margin-top: 90px;
+  padding-top: 70px;
+}
+/* .footer h4{
+  margin-bottom: 2px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+.footer p{
+  color: #3a3a3a;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.footer h5{
+  font-weight: 500;
+  margin-bottom: 45px;
+  display: inline-block;
+  font-size: 14px;
+  color: #3a3a3a;
+} */
