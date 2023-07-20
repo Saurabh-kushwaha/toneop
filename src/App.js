@@ -1,21 +1,19 @@
 
+import {Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import MenuTabs from "./components/MenuTabs";
 import Navbar from "./components/Navbar";
-import Tab from "./components/Tab";
-import Testimonial from "./components/Testimonial";
+import Slider from "./components/Slider";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <MenuTabs />
-      <Tab />
+        <Routes>
+          <Route path="/" element={<Slider/>} />
+          <Route path="/menu" element={<MenuTabs/>} />
+        </Routes>
       <Footer/>
-      {/* <Testimonial />
-      <Tab />
-      <MenuTabs/>
-      <Footer/> */}
     </div>
   );
 }

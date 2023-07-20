@@ -19,7 +19,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.meal-slider-bg{
+  background-color: #f8fbf5;
+}
 .footer{
   text-align: center;
   background-color: #f8fbf5;

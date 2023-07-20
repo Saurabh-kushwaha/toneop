@@ -1,7 +1,8 @@
 import React from 'react';
-
+import Tab from "./Tab";
 const MenuTabs = () => {
     return (
+        <>
         <div className="flex overflow-x-auto MenuScreen_menutabs_div_scroll">
             <button className="MenuScreen_button outline-none border border-gray-300">
                 <img src="https://toneop.s3.ap-south-1.amazonaws.com/toneop_eats/category/supersalad.webp" alt="Salad Bowls" className="MenuScreen_menutabs_img" />
@@ -39,7 +40,9 @@ const MenuTabs = () => {
                 <img src="https://toneop.s3.ap-south-1.amazonaws.com/toneop_eats/category/Sandwich_meals.png" alt="Sandwich Meal" className="MenuScreen_menutabs_img" />
                 Sandwich Meal
             </button>
-        </div>
+            </div>
+            <Tab />
+        </>
     );
 };
 
