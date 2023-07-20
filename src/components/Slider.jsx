@@ -64,7 +64,7 @@ const Slider = () => {
                         <div key={index} className="w-full h-full flex justify-center">
                             <img
                                 src={image}
-                                alt={`Image ${index + 1}`}
+                                alt={`ImageAlt ${index + 1}`}
                                 className="w-60 h-64 md:w-40 md:h-40 lg:w-60 lg:h-64 object-cover"
                             />
                         </div>
